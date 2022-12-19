@@ -51,9 +51,9 @@
 ~~~~~~~~~~~~~~ MAIN LOOP ~~~~~~~~~~~~~~
 ,+
 [
-  >+>+>+>+ >+>+>+>+           set all command booleans to 0
-  <<<< <<<<                   p=0
-  --------------------------------------------
+  >>+>+>+ >+>+>+>+            set all command booleans to 0
+  <<<< <<< ++++++             1=6; p=1
+  [-<------->]+<--            1=1;0=original input minus 43 (ascii value of plus)
   [                           if input is not a plus character
     >-<                       1=0
     -
