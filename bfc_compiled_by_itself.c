@@ -1053,6 +1053,7 @@ int main(){
 				}
 			}
 		}
+		--*p;
 		++p;
 		while(*p){
 			--*p;
@@ -1122,17 +1123,14 @@ int main(){
 			putchar(*p);
 			--p;
 			putchar(*p);
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
+			++*p;
+			while(*p){
+				--*p;
+				--p;
+				++*p;
+			}
+			--*p;
+			++p;
 		}
 		++p;
 		while(*p){
@@ -1245,16 +1243,14 @@ int main(){
 			putchar(*p);
 			--p;
 			putchar(*p);
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
+			++*p;
+			while(*p){
+				--*p;
+				--p;
+				++*p;
+			}
+			--*p;
+			++p;
 		}
 		++p;
 		while(*p){
@@ -1319,15 +1315,14 @@ int main(){
 			putchar(*p);
 			--p;
 			putchar(*p);
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
-			--p;
+			++*p;
+			while(*p){
+				--*p;
+				--p;
+				++*p;
+			}
+			--*p;
+			++p;
 		}
 		++p;
 		while(*p){
@@ -1747,14 +1742,12 @@ int main(){
 			--p;
 			--p;
 		}
-		--p;
-		--p;
-		--p;
-		--p;
-		--p;
-		--p;
-		--p;
-		--p;
+		++*p;
+		while(*p){
+			--*p;
+			--p;
+			++*p;
+		}
 		*p=getchar();
 		++*p;
 	}
