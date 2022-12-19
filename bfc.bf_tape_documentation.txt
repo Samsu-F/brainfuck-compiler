@@ -1,0 +1,2 @@
+tape during the main loop:
+input | +bit | ,bit | -bit | .bit | <bit | >bit | [bit | ]bit |tmp/0|indentcounter|tmp/0|\n|;|-|p|*|}|w|h|i|l|e|(|)|{|=|g|e|t|c|h|a|r|
