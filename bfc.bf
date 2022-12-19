@@ -86,13 +86,14 @@
       ]
     ]
   ]
+  -                                 set cell 0 to 255
   >
   [ if input was plus sign
     ->->->-> ->->->->
     >>>-.
     <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
     >>>>+..-.<.<<.<.
-    <<<<<<<<<<<
+    +[-<+]->                        move to cell 1
   ]
   >
   [ if input was a comma
@@ -101,7 +102,7 @@
     <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
     >>>>.<.>>>>>>>>>>>.>.>.>.>.>.>.>.
     <<<<<<<<<<.>.<<<<<<<<<<<.<.
-    <<<<<<<<<<
+    +[-<+]->                        move to cell 1
   ]
   >
   [ if input was minus sign
@@ -109,7 +110,7 @@
     >>>-.
     <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
     >>..>>.<.<<.<.
-    <<<<<<<<<
+    +[-<+]->                        move to cell 1
   ]
   >
   [ if input was a dot
@@ -152,7 +153,7 @@
     >>>>>.<<<<<.
     <<<<
   ]
-  <<<< <<<<
+  +[-<+]                            move to cell 0
   ,+
 ]
 
