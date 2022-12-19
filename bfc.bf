@@ -70,8 +70,8 @@
             >>>> >-< <<<<
             --
             [                 if input is not the right command
-              >>>> >>-<< <<<<
-              -----------------------------
+              >>>> >>-<< <<<
+              +++++[-<------>]<+
               [               if input is not an opening square bracket
                 >>>> >>>-<<< <<<<
                 --
