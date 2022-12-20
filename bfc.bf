@@ -92,7 +92,7 @@
     ->->->-> ->->->->
     >>>-.+                          print tab
     >>>>+..-.<.<<.<.
-    +[-<+]->                        move to cell 1
+    <<<<<<<<<<<                     move to cell 1
   ]
   >
   [ if input was a comma
@@ -100,14 +100,14 @@
     >>>-.+                          print tab
     >>>>.<.>>>>>>>>>>>.>.>.>.>.>.>.>.
     <<<<<<<<<<.>.<<<<<<<<<<<.<.
-    +[-<+]->                        move to cell 1
+    <<<<<<<<<<                      move to cell 1
   ]
   >
   [ if input was minus sign
     ->->->-> ->->
     >>>-.+                          print tab
     >>..>>.<.<<.<.
-    +[-<+]->                        move to cell 1
+    <<<<<<<<<                       move to cell 1
   ]
   >
   [ if input was a dot
@@ -145,8 +145,7 @@
     >>>>>.<<<<<.
     <<<<
   ]
-  +[-<+]-                           move to cell 0
-  >>>>>>>>>                         move to not_a_comment_bit
+  >                                 move to not_a_comment_bit
   [                                 if last character was not a comment
     ->[-<+>>+<]>[->-.+<]<<[->+<]    print the number of tabs saved in the indentcounter
   ]
