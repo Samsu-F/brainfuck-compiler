@@ -89,40 +89,40 @@
   -                                 set cell 0 to 255
   >
   [ if input was plus sign
-    ->->->-> ->->->->
+    ->>>> >>>>
     >>>-.+                          print tab
     >>>>+..-.<.<<.<.
-    <<<<<<<<<<<                     move to cell 1
+    <<<<[-<]                        move to cell 1
   ]
   >
   [ if input was a comma
-    ->->->-> ->->->
+    ->>>> >>>
     >>>-.+                          print tab
     >>>>.<.>>>>>>>>>>>.>.>.>.>.>.>.>.
     <<<<<<<<<<.>.<<<<<<<<<<<.<.
-    <<<<<<<<<<                      move to cell 1
+    <<<<[-<]                        move to cell 2
   ]
   >
   [ if input was minus sign
-    ->->->-> ->->
+    ->>>> >>
     >>>-.+                          print tab
     >>..>>.<.<<.<.
-    <<<<<<<<<                       move to cell 1
+    <<<<[-<]                        move to cell 3
   ]
   >
   [ if input was a dot
-    ->->->-> ->
+    ->>>> >
     >>>-.+                          print tab
     >>>.>>>>>>>>>>>>>>+.-.>.>.>.>.
     <<<<<<<<<<.<<<<<<<.<.>>>>>>>>>.<<<<<<<<<<<.<.
-    <<<<<<<<
+    <<<<[-<]
   ]
   >
   [ if input was left command
-    ->->->->
+    ->>>>
     >>>-.+                          print tab
     >>..>.<<.<.
-    <<<<<<<
+    <<<<[-<]
   ]
   >
   [ if input was right command
