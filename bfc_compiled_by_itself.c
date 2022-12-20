@@ -479,6 +479,7 @@ int main(){
 		--p;
 		--p;
 	}
+	++*p;
 	++p;
 	++p;
 	++p;
@@ -607,19 +608,11 @@ int main(){
 	while(*p){
 		--p;
 	}
-	--p;
-	while(*p){
-		--p;
-	}
 	++p;
 	++*p;
 	putchar(*p);
 	--*p;
 	putchar(*p);
-	while(*p){
-		++p;
-	}
-	++p;
 	while(*p){
 		++p;
 	}
@@ -756,7 +749,6 @@ int main(){
 	putchar(*p);
 	++p;
 	++p;
-	++*p;
 	++*p;
 	--p;
 	--p;
