@@ -51,7 +51,7 @@
 ~~~~~~~~~~~~~~ MAIN LOOP ~~~~~~~~~~~~~~
 ,+
 [
-  >>+>+>+ >+>+>+>+            set all command booleans to 0
+  >>+>+>+ >+>+>+>+ >+         set all command booleans to 0
   [<] ++++++                  1=6; p=1
   [-<------->]+<--            1=1;0=original input minus 43 (ascii value of plus)
   [                           if input is not a plus character
@@ -76,7 +76,7 @@
                 >>>> >>>-<<< <<<<
                 --
                 [             if input is not a closing square bracket
-                  >>>> >>>>-<<<< <<<<
+                  >>>> >>>> ->-< <<<< <<<<
                   [-]         clear the input cell
                 ]
               ]
@@ -90,16 +90,14 @@
   >
   [ if input was plus sign
     ->->->-> ->->->->
-    >>>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >>>-.+                          print tab
     >>>>+..-.<.<<.<.
     +[-<+]->                        move to cell 1
   ]
   >
   [ if input was a comma
     ->->->-> ->->->
-    >>>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >>>-.+                          print tab
     >>>>.<.>>>>>>>>>>>.>.>.>.>.>.>.>.
     <<<<<<<<<<.>.<<<<<<<<<<<.<.
     +[-<+]->                        move to cell 1
@@ -107,16 +105,14 @@
   >
   [ if input was minus sign
     ->->->-> ->->
-    >>>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >>>-.+                          print tab
     >>..>>.<.<<.<.
     +[-<+]->                        move to cell 1
   ]
   >
   [ if input was a dot
     ->->->-> ->
-    >>>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >>>-.+                          print tab
     >>>.>>>>>>>>>>>>>>+.-.>.>.>.>.
     <<<<<<<<<<.<<<<<<<.<.>>>>>>>>>.<<<<<<<<<<<.<.
     <<<<<<<<
@@ -124,37 +120,38 @@
   >
   [ if input was left command
     ->->->->
-    >>>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >>>-.+                          print tab
     >>..>.<<.<.
     <<<<<<<
   ]
   >
   [ if input was right command
     ->->->
-    >>>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >>>-.+                          print tab
     >>>>+..-<.<<.<.
     <<<<<<
   ]
   >
   [ if input was opening square bracket
     ->->
-    >>>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >>>-.+                          print tab
     >>>>>>.>.>.>.>.>.<<<<<<<.<.>>>>>>>>>.>.<<<<<<<<<<<<<.
-    <<+<<<
+    <<+<<<                          increment indentcounter
   ]
   >
   [ if input was closing square bracket
     ->
-    >->>-.
-    <<[-<+>>+<]>[->.<]<<[->+<]>>>+  print the number of tabs saved in the indentcounter
+    >->>                            decrement indentcounter
     >>>>>.<<<<<.
     <<<<
   ]
+  +[-<+]-                           move to cell 0
+  >>>>>>>>>                         move to not_a_comment_bit
+  [                                 if last character was not a comment
+    ->[-<+>>+<]>[->-.+<]<<[->+<]    print the number of tabs saved in the indentcounter
+  ]
   +[-<+]                            move to cell 0
-  ,+
+  ,+                                get input and increment to check for EOF
 ]
 
 
