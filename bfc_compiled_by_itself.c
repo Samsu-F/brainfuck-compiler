@@ -604,48 +604,29 @@ int main(){
 	--*p;
 	--*p;
 	putchar(*p);
+	while(*p){
+		--p;
+	}
 	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
-	--p;
+	while(*p){
+		--p;
+	}
+	++p;
 	++*p;
 	putchar(*p);
 	--*p;
 	putchar(*p);
+	while(*p){
+		++p;
+	}
 	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
-	++p;
+	while(*p){
+		++p;
+	}
+	--p;
+	--p;
+	--p;
+	--p;
 	putchar(*p);
 	++p;
 	putchar(*p);
