@@ -1,5 +1,5 @@
 ~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~
->>>>>>>>+++++++++               8=10;                   p=8
+->>>>>>>>+++++++++              0=255;8=10              p=8
 [->+>++++>+++++++++++>++++++++++++>++++++++++++<<<<<]
 8=0;9=9;10=36;11=99;12=108;13=108;                      p=8
 >>-.>>---.>++.<<.               10=35;12=105;13=110     p=11    print #inc
@@ -42,18 +42,17 @@
 >>--.>>+<<++<<--<-              11=96;12=114;16=2       p=11    print ;
 [------------>------------->-------->-->++++++++++>+++++<<<<<]
 11=0;12=10;13=59;14=45;15=112;16=42                     p=11
->.<<[-]+<[-]<<<<<<<<<           9=0;10=0                p=0     print \n
+>.<<[-]+<[-]-[<+]               {1 to 8}=1;9=255;10=1   p=0     print \n
 
 
 
 
 
 ~~~~~~~~~~~~~~ MAIN LOOP ~~~~~~~~~~~~~~
-,+
+,+                            get input and increment to check for EOF
 [
-  >>+>+>+ >+>+>+>+ >-         set all command booleans to 1; set not_a_comment_bit to 255
-  [<] ++++++                  1=6; p=1
-  [-<------->]+<--            1=1;0=original input minus 43 (ascii value of plus)
+  >+++++                      1=6; p=1
+  [-<------->]+<--            1=1; 0=original input minus 43 (ascii value of plus)
   [                           if input is not a plus character
     >-<                       1=0
     -
@@ -152,7 +151,7 @@
     >-[->-.+<]                      print one tab less than the number saved in indentcounter
     <<[->+<]                        move value of indentcounter back in its place
   ]
-  +[-<+]                            move to cell 0
+  -[<+]                             set not_a_comment_bit to 255; move to cell 0; set all command booleans to 1
   ,+                                get input and increment to check for EOF
 ]
 
