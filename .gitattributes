@@ -1,0 +1,3 @@
+# to stop github from claiming that the main language of this project is C
+*.bf linguist-detectable=true
+*.c linguist-detectable=false
