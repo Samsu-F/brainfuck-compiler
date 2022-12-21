@@ -42,7 +42,7 @@
 >>--.>>+<<++<<--<-              11=96;12=114;16=2       p=11    print ;
 [------------>------------->-------->-->++++++++++>+++++<<<<<]
 11=0;12=10;13=59;14=45;15=112;16=42                     p=11
->.<<[-]<[-]<<<<<<<<<            9=0;10=0                p=0     print \n
+>.<<[-]+<[-]<<<<<<<<<           9=0;10=0                p=0     print \n
 
 
 
@@ -89,47 +89,47 @@
   -                                 set cell 0 to 255
   >
   [ if input was plus sign
-    ->>>> >>>>
-    >>>-.+                          print tab
+    ->[>]
+    >-.+                            print tab
     >>>>+..-.<.<<.<.
     <<<<[-<]                        move to cell 1
   ]
   >
   [ if input was a comma
-    ->>>> >>>
-    >>>-.+                          print tab
+    ->[>]
+    >-.+                            print tab
     >>>>.<.>>>>>>>>>>>.>.>.>.>.>.>.>.
     <<<<<<<<<<.>.[<]>>.<.
     <<<<[-<]                        move to cell 2
   ]
   >
   [ if input was minus sign
-    ->>>> >>
-    >>>-.+                          print tab
+    ->[>]
+    >-.+                            print tab
     >>..>>.<.<<.<.
     <<<<[-<]                        move to cell 3
   ]
   >
   [ if input was a dot
-    ->>>> >
-    >>>-.+                          print tab
+    ->[>]
+    >-.+                            print tab
     >>>.>>>>>>>>>>>>>>+.-.>.>.>.>.
     <<<<<<<<<<.<<<<<<<.<.>>>>>>>>>.[<]>>.<.
     <<<<[-<]
   ]
   >
   [ if input was left command
-    ->>>>
-    >>>-.+                          print tab
+    ->[>]
+    >-.+                            print tab
     >>..>.<<.<.
     <<<<[-<]
   ]
   >
   [ if input was right command
-    ->->->
-    >>>-.+                          print tab
+    ->[>]
+    >-.+                            print tab
     >>>>+..-<.<<.<.
-    <<<<<<
+    <<<<-<-<
   ]
   >
   [ if input was opening square bracket
@@ -147,7 +147,7 @@
   ]
   >                                 move to not_a_comment_bit
   [                                 if last character was not a comment
-    ->[-<+>>+<]>[->-.+<]<<[->+<]    print the number of tabs saved in the indentcounter
+    ->-[-<+>>+<]>[->-.+<]<+<[->+<]  print  one less tab than the number saved in the indentcounter
   ]
   +[-<+]                            move to cell 0
   ,+                                get input and increment to check for EOF
