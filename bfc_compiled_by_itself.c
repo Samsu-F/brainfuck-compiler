@@ -1056,8 +1056,6 @@ int main(){
 		}
 		++p;
 		while(*p){
-			--*p;
-			++p;
 			while(*p){
 				++p;
 			}
@@ -1127,11 +1125,10 @@ int main(){
 				--*p;
 				--p;
 			}
+			++p;
 		}
 		++p;
 		while(*p){
-			--*p;
-			++p;
 			while(*p){
 				++p;
 			}
@@ -1161,11 +1158,10 @@ int main(){
 				--*p;
 				--p;
 			}
+			++p;
 		}
 		++p;
 		while(*p){
-			--*p;
-			++p;
 			while(*p){
 				++p;
 			}
@@ -1250,11 +1246,10 @@ int main(){
 				--*p;
 				--p;
 			}
+			++p;
 		}
 		++p;
 		while(*p){
-			--*p;
-			++p;
 			while(*p){
 				++p;
 			}
@@ -1281,11 +1276,10 @@ int main(){
 				--*p;
 				--p;
 			}
+			++p;
 		}
 		++p;
 		while(*p){
-			--*p;
-			++p;
 			while(*p){
 				++p;
 			}
@@ -1316,15 +1310,13 @@ int main(){
 			--p;
 			--*p;
 			--p;
+			--*p;
 		}
 		++p;
 		while(*p){
-			--*p;
-			++p;
-			--*p;
-			++p;
-			++p;
-			++p;
+			while(*p){
+				++p;
+			}
 			++p;
 			--*p;
 			putchar(*p);
@@ -1378,7 +1370,9 @@ int main(){
 			++*p;
 			--p;
 			--p;
+			--*p;
 			--p;
+			--*p;
 		}
 		++p;
 		while(*p){

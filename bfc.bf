@@ -96,47 +96,47 @@
   ]
   >
   [ if input was a comma
-    ->[>]
+    [>]
     >-.+                            print tab
     >>>>.<.>>>>>>>>>>>.>.>.>.>.>.>.>.
     <<<<<<<<<<.>.[<]>>.<.
-    <<<<[-<]                        move to cell 2
+    <<<<[-<]>                       move to cell 2
   ]
   >
   [ if input was minus sign
-    ->[>]
+    [>]
     >-.+                            print tab
     >>..>>.<.<<.<.
-    <<<<[-<]                        move to cell 3
+    <<<<[-<]>                       move to cell 3
   ]
   >
   [ if input was a dot
-    ->[>]
+    [>]
     >-.+                            print tab
     >>>.>>>>>>>>>>>>>>+.-.>.>.>.>.
     <<<<<<<<<<.<<<<<<<.<.>>>>>>>>>.[<]>>.<.
-    <<<<[-<]
+    <<<<[-<]>
   ]
   >
   [ if input was left command
-    ->[>]
+    [>]
     >-.+                            print tab
     >>..>.<<.<.
-    <<<<[-<]
+    <<<<[-<]>
   ]
   >
   [ if input was right command
-    ->[>]
+    [>]
     >-.+                            print tab
     >>>>+..-<.<<.<.
-    <<<<-<-<
+    <<<<-<-<-
   ]
   >
   [ if input was opening square bracket
-    ->->
-    >>>-.+                          print tab
+    [>]
+    >-.+                            print tab
     >>>>>>.>.>.>.>.>.<<<<<<<.<.>>>>>>>>>.>.[<]>.
-    <<+<<<                          increment indentcounter
+    <<+<<-<-                        increment indentcounter
   ]
   >
   [ if input was closing square bracket
