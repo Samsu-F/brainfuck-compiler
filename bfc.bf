@@ -147,7 +147,10 @@
   ]
   >                                 move to not_a_comment_bit
   [                                 if last character was not a comment
-    ->-[-<+>>+<]>[->-.+<]<+<[->+<]  print  one less tab than the number saved in the indentcounter
+    ->                              set not_a_comment_bit to 0
+    -[-<+>>+<]                      decrement indentcounter; copy to cell 9 and cell 11
+    >[->-.+<]                       print the number of tabs saved in the indentcounter
+    <+<[->+<]                       restore original value of indentcounter
   ]
   +[-<+]                            move to cell 0
   ,+                                get input and increment to check for EOF
