@@ -51,7 +51,7 @@
 ~~~~~~~~~~~~~~ MAIN LOOP ~~~~~~~~~~~~~~
 ,+
 [
-  >>+>+>+ >+>+>+>+ >+         set all command booleans to 0
+  >>+>+>+ >+>+>+>+ >-         set all command booleans to 1; set not_a_comment_bit to 255
   [<] ++++++                  1=6; p=1
   [-<------->]+<--            1=1;0=original input minus 43 (ascii value of plus)
   [                           if input is not a plus character
@@ -76,7 +76,7 @@
                 >>>> >>>-<<< <<<<
                 --
                 [             if input is not a closing square bracket
-                  >>>> >>>> ->-< <<<< <<<<
+                  >>>> >>>> ->+< <<<< <<<<
                   [-]         clear the input cell
                 ]
               ]
@@ -147,10 +147,10 @@
   ]
   >                                 move to not_a_comment_bit
   [                                 if last character was not a comment
-    ->                              set not_a_comment_bit to 0
-    -[-<+>>+<]                      decrement indentcounter; copy to cell 9 and cell 11
-    >[->-.+<]                       print the number of tabs saved in the indentcounter
-    <+<[->+<]                       restore original value of indentcounter
+    >[<+>                           set not_a_comment_bit to 0 if indentcounter is not 0
+    [-<+>>+<]]                      copy indentcounter to cell 9 and cell 11
+    >-[->-.+<]                      print one tab less than the number saved in indentcounter
+    <<[->+<]                        move value of indentcounter back in its place
   ]
   +[-<+]                            move to cell 0
   ,+                                get input and increment to check for EOF
